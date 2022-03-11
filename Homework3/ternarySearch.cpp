@@ -7,7 +7,6 @@ int ternarySearch(int x, int n, int a[])
     {
         int m1 = l + (r - l) / 3;
         int m2 = r - (r - l) / 3;
-        //cout << l << " " << r << " " << m1 << " " << m2 << "\n";
         if (x == a[m1])
             return m1;
         if (x == a[m2])
