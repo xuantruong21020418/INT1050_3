@@ -10,7 +10,7 @@ int ternarySearch(int x, int n, int a[])
         if (x == a[m1])
             return m1;
         if (x == a[m2])
-            return m2;
+            return m2;cadc
         if (x < a[m1])
             r = m1 - 1;
         else if (x > a[m2])
