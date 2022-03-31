@@ -1,16 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-int cnt = 0;
-
-void ones(string s, int i) {
-    if (s[i] == '1') cnt ++;
-    if (i < s.size()) ones(s, i+1);
+int ones(string s){
+    if (s.length() == 1 && s[0] == '1') return 1;
+    else if (s.length() == 1 && s[0] == '0') return 0;
+    else if (s[s.length() - 1] == '1')
+    {
+        s.pop_back();
+        return ones(s) + 1;
+    }
+    else
+    {
+        s.pop_back();
+        return ones(s);
+    }
 }
-int main() {
-    string t;
-    cin >> t;
-    ones(t, 0);
-    cout << "So bit 1 la: " << cnt;
+
+int main(){
+    string s;
+    cin >> s;
+    cout << ones(s);
 }
